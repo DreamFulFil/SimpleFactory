@@ -1,24 +1,36 @@
 package dream.blog.practice.simplefactory.api.test;
 
-import java.math.BigDecimal;
+import static org.junit.Assert.assertTrue;
 
+import java.math.BigInteger;
+
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 import dream.blog.practice.simplefactory.api.ComputingApi;
 import dream.blog.practice.sipmlefactory.impl.SimpleCalculator;
 
 public class ComputingApiUnitTest {
+	
+	private ComputingApi api;
+	private BigInteger operand1; 
+	private BigInteger operand2;
+	
+	@Before
+	public void before() {
+		api = new SimpleCalculator();
+		operand1 = BigInteger.valueOf(15);
+		operand2 = BigInteger.valueOf(8);
+	}
+	
 	@Test
 	public void testAddition() {
 		//Arrange
-		ComputingApi api = new SimpleCalculator();
-		BigDecimal operand1 = new BigDecimal(53.2);
-		BigDecimal operand2 = new BigDecimal(48.7);
-		BigDecimal expected = new BigDecimal(101.9);
+		BigInteger expected = BigInteger.valueOf(23);
 		
 		//Act
-		BigDecimal result = api.compute(operand1, operand2, "+");
+		BigInteger result = api.compute(operand1, operand2, "+");
 		
 		//Assert
 		assertTrue(expected.compareTo(result) == 0);
@@ -27,15 +39,41 @@ public class ComputingApiUnitTest {
 	@Test
 	public void testSubtraction() {
 		//Arrange
-		ComputingApi api = new SimpleCalculator();
-		BigDecimal operand1 = new BigDecimal(53.2);
-		BigDecimal operand2 = new BigDecimal(48.7);
-		BigDecimal expected = new BigDecimal(4.5);
+		BigInteger expected = BigInteger.valueOf(7);
 		
 		//Act
-		BigDecimal result = api.compute(operand1, operand2, "-");
+		BigInteger result = api.compute(operand1, operand2, "-");
 		
 		//Assert
 		assertTrue(expected.compareTo(result) == 0);
+	}
+	
+	@Test
+	public void testMultiplication(){
+		//Arrange
+		BigInteger expected = BigInteger.valueOf(120);
+		
+		//Act
+		BigInteger result = api.compute(operand1, operand2, "*");
+		//Assert
+		assertTrue(expected.compareTo(result) == 0);
+	}
+	
+	@Test
+	public void testDivision() {
+		//Arrange
+		BigInteger expected = BigInteger.valueOf(1);
+		
+		//Act
+		BigInteger result = api.compute(operand1, operand2, "/");
+		//Assert
+		assertTrue(expected.compareTo(result) == 0);
+	}
+	
+	@After
+	public void after() {
+		operand1 = null;
+		operand2 = null;
+		api = null;
 	}
 }

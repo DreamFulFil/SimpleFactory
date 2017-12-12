@@ -1,9 +1,9 @@
 package dream.blog.practice.simplefactory.api;
 
-import java.math.BigDecimal;
+import java.math.BigInteger;
 
 public interface ComputingApi {
 
-	BigDecimal compute(BigDecimal operand1, BigDecimal operand2, String operator);
+	BigInteger compute(BigInteger operand1, BigInteger operand2, String operator);
 	
 }

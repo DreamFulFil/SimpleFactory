@@ -1,13 +1,13 @@
 package dream.blog.practice.sipmlefactory.impl;
 
-import java.math.BigDecimal;
+import java.math.BigInteger;
 
 import dream.blog.practice.simplefactory.api.ComputingApi;
 
 public class SimpleCalculator implements ComputingApi {
 
 	@Override
-	public BigDecimal compute(BigDecimal operand1, BigDecimal operand2, String operator) {
+	public BigInteger compute(BigInteger operand1, BigInteger operand2, String operator) {
 		switch(operator) {
 			case "+":
 				return operand1.add(operand2);

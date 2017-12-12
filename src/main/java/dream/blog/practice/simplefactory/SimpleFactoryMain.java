@@ -1,6 +1,6 @@
 package dream.blog.practice.simplefactory;
 
-import java.math.BigDecimal;
+import java.math.BigInteger;
 
 import dream.blog.practice.simplefactory.api.ComputingApi;
 import dream.blog.practice.sipmlefactory.impl.SimpleCalculator;
@@ -8,7 +8,7 @@ import dream.blog.practice.sipmlefactory.impl.SimpleCalculator;
 public class SimpleFactoryMain{
 	public static void main(String[] args) {
 		ComputingApi api = new SimpleCalculator();
-		BigDecimal result = api.compute(new BigDecimal(1), new BigDecimal(2),"+");
+		BigInteger result = api.compute(BigInteger.valueOf(1), BigInteger.valueOf(2),"+");
 		System.err.println(result);
 	}
 }

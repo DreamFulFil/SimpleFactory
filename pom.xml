@@ -4,12 +4,12 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>dream.blog.practice</groupId>
-	<artifactId>bdd-cucumber</artifactId>
+	<artifactId>simplefactory</artifactId>
 	<version>1.00-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
-	<name>BDD Practice</name>
-	<description>Used to pratice developing in BDD with Spring Cucumber</description>
+	<name>Simple Factory Practice</name>
+	<description>Used to pratice Simple Factory</description>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
