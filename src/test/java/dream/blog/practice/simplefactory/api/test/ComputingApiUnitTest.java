@@ -19,7 +19,7 @@ public class ComputingApiUnitTest {
 	
 	@Before
 	public void before() {
-		api = ComputingApiFactory.getComputingApi();
+		api = ComputingApiFactory.getComputingApi(1);
 		operand1 = BigInteger.valueOf(15);
 		operand2 = BigInteger.valueOf(8);
 	}
@@ -69,6 +69,20 @@ public class ComputingApiUnitTest {
 		//Assert
 		assertTrue(expected.compareTo(result) == 0);
 	}
+	
+	@Test
+	public void testPower() {
+		//Arrange
+		api = ComputingApiFactory.getComputingApi(2);
+		BigInteger expected = BigInteger.valueOf(2562890625L);
+		
+		//Act
+		BigInteger result = api.compute(operand1, operand2, "^");
+		
+		//Assert
+		assertTrue(expected.compareTo(result) == 0);
+	}
+
 	
 	@After
 	public void after() {
