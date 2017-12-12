@@ -83,7 +83,6 @@ public class ComputingApiUnitTest {
 		assertTrue(expected.compareTo(result) == 0);
 	}
 
-	
 	@After
 	public void after() {
 		operand1 = null;
