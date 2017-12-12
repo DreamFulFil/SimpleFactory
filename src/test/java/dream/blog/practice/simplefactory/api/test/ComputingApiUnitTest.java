@@ -9,7 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import dream.blog.practice.simplefactory.api.ComputingApi;
-import dream.blog.practice.sipmlefactory.impl.SimpleCalculator;
+import dream.blog.practice.sipmlefactory.factory.ComputingApiFactory;
 
 public class ComputingApiUnitTest {
 	
@@ -19,7 +19,7 @@ public class ComputingApiUnitTest {
 	
 	@Before
 	public void before() {
-		api = new SimpleCalculator();
+		api = ComputingApiFactory.getComputingApi();
 		operand1 = BigInteger.valueOf(15);
 		operand2 = BigInteger.valueOf(8);
 	}
