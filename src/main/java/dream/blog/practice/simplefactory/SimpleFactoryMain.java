@@ -3,7 +3,7 @@ package dream.blog.practice.simplefactory;
 import java.math.BigInteger;
 
 import dream.blog.practice.simplefactory.api.ComputingApi;
-import dream.blog.practice.sipmlefactory.factory.ComputingApiFactory;
+import dream.blog.practice.simplefactory.factory.ComputingApiFactory;
 
 public class SimpleFactoryMain{
 	public static void main(String[] args) {

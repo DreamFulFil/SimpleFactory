@@ -9,7 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import dream.blog.practice.simplefactory.api.ComputingApi;
-import dream.blog.practice.sipmlefactory.factory.ComputingApiFactory;
+import dream.blog.practice.simplefactory.factory.ComputingApiFactory;
 
 public class ComputingApiUnitTest {
 	

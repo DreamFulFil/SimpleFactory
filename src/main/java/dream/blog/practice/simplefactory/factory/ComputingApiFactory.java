@@ -1,4 +1,4 @@
-package dream.blog.practice.sipmlefactory.factory;
+package dream.blog.practice.simplefactory.factory;
 
 import dream.blog.practice.simplefactory.api.ComputingApi;
 import dream.blog.practice.sipmlefactory.impl.EngineeringCalculator;
