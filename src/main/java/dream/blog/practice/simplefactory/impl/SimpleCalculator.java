@@ -1,4 +1,4 @@
-package dream.blog.practice.sipmlefactory.impl;
+package dream.blog.practice.simplefactory.impl;
 
 import java.math.BigInteger;
 

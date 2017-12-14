@@ -1,8 +1,8 @@
 package dream.blog.practice.simplefactory.factory;
 
 import dream.blog.practice.simplefactory.api.ComputingApi;
-import dream.blog.practice.sipmlefactory.impl.EngineeringCalculator;
-import dream.blog.practice.sipmlefactory.impl.SimpleCalculator;
+import dream.blog.practice.simplefactory.impl.EngineeringCalculator;
+import dream.blog.practice.simplefactory.impl.SimpleCalculator;
 
 public class ComputingApiFactory {
 	public static ComputingApi getComputingApi(int type) {
